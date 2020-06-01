@@ -1,8 +1,13 @@
 name: 'yes24_crawler'
 
+# 최초엔 아래 조건으로 master push일 때 사용되도록 설정
+# on:
+#   push:
+#     branches: [ master ]
+
 on:
-  push:
-    branches: [ master ]
+  schedule:
+    - cron: '0 9 * * *'
 
 jobs:
   build:
