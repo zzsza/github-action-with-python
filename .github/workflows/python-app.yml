@@ -1,8 +1,8 @@
-name: yes24_crawler
+name: 'yes24_crawler'
 
 on:
-  schedule:
-    - cron: '0 9 * * *'
+  push:
+    branches: [ master ]
 
 jobs:
   build:
