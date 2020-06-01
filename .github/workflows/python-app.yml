@@ -1,4 +1,4 @@
-name: 'yes24_crawler'
+name: yes24_crawler
 
 on:
   schedule:
