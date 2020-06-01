@@ -1,0 +1,4 @@
+beautifulsoup4==4.7.1
+requests==2.22.0
+PyGithub==1.51
+pytz==2019.1
