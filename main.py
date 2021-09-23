@@ -11,13 +11,13 @@ if __name__ == "__main__":
 
     seoul_timezone = timezone('Asia/Seoul')
     today = datetime.now(seoul_timezone)
-    today_data = today.strftime("%Y년 %m월 %d일")
+    today_date = today.strftime("%Y년 %m월 %d일")
 
     yes24_it_new_product_url = "http://www.yes24.com/24/Category/NewProductList/001001003?sumGb=01"
     
     soup = parsing_beautifulsoup(yes24_it_new_product_url)
     
-    issue_title = f"YES24 IT 신간 도서 알림({today_data})"
+    issue_title = f"YES24 IT 신간 도서 알림({today_date})"
     upload_contents = extract_book_data(soup)
     repo = get_github_repo(access_token, repository_name)
     upload_github_issue(repo, issue_title, upload_contents)
