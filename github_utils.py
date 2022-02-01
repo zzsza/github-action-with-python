@@ -9,8 +9,7 @@ def get_github_repo(access_token, repository_name):
     :return: repo object
     """
     g = Github(access_token)
-    repo = g.get_user().get_repo(repository_name)
-    return repo
+    return g.get_user().get_repo(repository_name)
 
 
 def upload_github_issue(repo, title, body):
