@@ -12,8 +12,7 @@ def parsing_beautifulsoup(url):
     data = requests.get(url)
 
     html = data.text
-    soup = BeautifulSoup(html, 'html.parser')
-    return soup
+    return BeautifulSoup(html, 'html.parser')
 
 
 def extract_book_data(soup):
