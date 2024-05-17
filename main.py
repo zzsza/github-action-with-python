@@ -13,7 +13,7 @@ if __name__ == "__main__":
     today = datetime.now(seoul_timezone)
     today_date = today.strftime("%Y년 %m월 %d일")
 
-    yes24_it_new_product_url = "http://www.yes24.com/24/Category/NewProductList/001001003?sumGb=01"
+    yes24_it_new_product_url = "https://www.yes24.com/Product/Category/AttentionNewProduct?pageNumber=1&pageSize=24&categoryNumber=001001003"
     
     soup = parsing_beautifulsoup(yes24_it_new_product_url)
     
